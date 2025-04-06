@@ -1,0 +1,49 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === Virtual Environments ===
+env/
+venv/
+.venv/
+*.egg-info/
+.Python
+
+# === Jupyter Notebooks (if you use them) ===
+.ipynb_checkpoints/
+
+# === Logs / Debug ===
+*.log
+*.out
+*.err
+
+# === Model Checkpoints ===
+*.pth
+*.pt
+checkpoints/
+runs/
+
+# === Dataset Files ===
+tox21.csv.gz
+
+# === Cache / Temp ===
+*.tmp
+*.temp
+*.bak
+.cache/
+*.DS_Store
+
+# === VSCode / IDEs ===
+.vscode/
+.idea/
+
+# === Mac/Linux hidden files ===
+.DS_Store
+Thumbs.db
+
+# === System files ===
+*.swp
+*~
