@@ -83,9 +83,9 @@ Trained models are saved automatically in the /models/ directory:
 
 Agent	       Path
 Classical	   models/model_crl.pth
-Quantum	       models/model_qrl.pth
-Aer	           models/model_aer.pth
-IBM	       models/model_ibm.pth
+Quantum	     models/model_qrl.pth
+Aer	         models/model_aer.pth
+IBM	         models/model_ibm.pth
 ```
 
 ### 📊 Evaluation Metrics
