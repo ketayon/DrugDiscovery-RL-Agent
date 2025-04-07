@@ -19,6 +19,7 @@ if not log.handlers:
         format="%(asctime)s [%(levelname)s] %(message)s"
     )
 
+
 class DrugDiscoveryEnv(gym.Env):
     def __init__(self, smiles_list):
         super().__init__()
@@ -71,7 +72,8 @@ class DrugDiscoveryEnv(gym.Env):
             return -10
 
     def _get_obs(self):
-        return np.array([(self._get_logp() + 5) / 10], dtype=np.float32)
+        raw = (self._get_logp() + 5) / 10
+        return np.clip(np.array([raw], dtype=np.float32), 0.0, 1.0)
 
     def render(self, mode='human'):
         log.info("Rendering molecule...")

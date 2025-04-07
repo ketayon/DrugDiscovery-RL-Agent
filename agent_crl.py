@@ -10,6 +10,7 @@ if not log.handlers:
         format="%(asctime)s [%(levelname)s] %(message)s"
     )
 
+
 class ClassicalPolicyNet(nn.Module):
     def __init__(self, n_actions):
         super().__init__()

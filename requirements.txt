@@ -5,3 +5,9 @@ torch
 pennylane
 tensorflow
 rdkit
+qiskit_aer
+qiskit
+qiskit_ibm_runtime
+pandas
+numpy
+pytest
