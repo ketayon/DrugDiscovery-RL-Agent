@@ -1,9 +1,19 @@
+# DrugDiscovery-RL-Agent
+
 # ⚛️ Quantum Reinforcement Learning for Molecular Optimization
 
-This project applies **Reinforcement Learning (RL)** to molecular design using real chemical structures — powered by **Quantum Circuits**, **IBM Quantum**, and **Classical Neural Networks**.
+> 🚀 A **modular hybrid reinforcement learning system** for **real-world molecular design** using classical and quantum computing.
 
-Agents learn to modify molecules (SMILES) to improve chemical properties like **logP** using OpenAI Gym, RDKit, and Quantum backends like **PennyLane**, **Qiskit Aer**, and **IBM Quantum**.
+This project applies **Reinforcement Learning (RL)** to optimize molecular structures (SMILES) using real chemical datasets. Agents learn to iteratively edit molecules to improve properties like **logP** — a key metric in drug discovery.
 
+Built on top of **OpenAI Gym**, **RDKit**, and **DeepChem**, this framework supports multiple agent backends:
+
+- 🧠 **Classical neural networks** (PyTorch)
+- ⚛️ **Quantum circuits** (via [PennyLane](https://pennylane.ai))
+- 🧪 **Quantum simulation** (Qiskit’s [AerSimulator](https://qiskit.org/documentation/apidoc/aer.html))
+- 🌐 **Real quantum execution** (via [IBM Quantum](https://quantum.ibm.com))
+
+This fusion of classical and quantum learning offers a powerful testbed for experimentation in computational chemistry and hybrid AI.
 ---
 
 ## 🚀 What This Project Can Do
