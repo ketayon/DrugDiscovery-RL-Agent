@@ -73,7 +73,7 @@ python train_compare.py
   - quantum
   - aer
   - ibm
-  If you choose ibm, you'll be prompted for your IBM Quantum API token.
+    - If you choose ibm, you will be prompted for your IBM Quantum API token.
 ```
 
 ### ❗️❗️❗️ Pay attention **Note on IBM Quantum Access**
@@ -86,17 +86,17 @@ If you choose the `ibm` agent (real quantum backend), please be aware:
 You will be prompted to enter your **IBM Quantum API token** at runtime. You can manage your plan and quota at [https://quantum.ibm.com](https://quantum.ibm.com).
 
 
-### 💾 Model Saving
+## 💾 Saved Model Paths
 
-```bash
-Trained models are saved automatically in the /models/ directory:
+Trained models are saved automatically in the `/models/` directory:
 
-Agent	       Path
-Classical	   models/model_crl.pth
-Quantum	     models/model_qrl.pth
-Aer	         models/model_aer.pth
-IBM	         models/model_ibm.pth
-```
+| Agent     | Saved Path              |
+|-----------|-------------------------|
+| Classical | `models/model_crl.pth`  |
+| Quantum   | `models/model_qrl.pth`  |
+| Aer       | `models/model_aer.pth`  |
+| IBM       | `models/model_ibm.pth`  |
+
 
 ### 📊 Evaluation Metrics
 
@@ -117,7 +117,7 @@ To use a real quantum backend:
     - Submit jobs
     - Wait for real quantum execution
     - Handle retry/timeout logic
-  ⚠️ IBM allows only a few pending jobs at a time. The code will wait/retry if queue is full.
+    - ⚠️ IBM allows only a few pending jobs at a time. The code will wait/retry if queue is full.
 ```
 
 ### 🧪 Run Tests
