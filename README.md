@@ -1,51 +1,127 @@
-# Quantum Reinforcement Learning for Molecular Optimization
+# ⚛️ Quantum Reinforcement Learning for Molecular Optimization
 
-This project explores **Quantum-enhanced Reinforcement Learning (QRL)** for **drug discovery** using real molecular data from the Tox21 dataset.
+This project applies **Reinforcement Learning (RL)** to molecular design using real chemical structures — powered by **Quantum Circuits**, **IBM Quantum**, and **Classical Neural Networks**.
 
-Agents (classical and quantum) learn to modify molecules to **improve chemical properties** (e.g., logP). The environment is built using `RDKit`, and quantum circuits are simulated using `PennyLane`.
+Agents learn to modify molecules (SMILES) to improve chemical properties like **logP** using OpenAI Gym, RDKit, and Quantum backends like **PennyLane**, **Qiskit Aer**, and **IBM Quantum**.
 
 ---
 
-## 🔬 What This Project Does
+## 🚀 What This Project Can Do
 
-- Loads real-world SMILES data from the **Tox21** dataset
-- Defines a custom **OpenAI Gym environment** for molecule editing
-- Uses **Quantum** or **Classical** policy networks
-- Trains an agent using the **REINFORCE policy gradient** algorithm
-- Renders molecules and logs chemical property rewards (e.g., logP)
+- ✅ Load real molecules from the **Tox21** dataset
+- 🧪 Define a Gym-compatible molecule editing environment
+- ⚛️ Train policy networks using:
+  - Classical neural nets
+  - Quantum circuits (PennyLane)
+  - Quantum circuit simulation (Qiskit Aer)
+  - Real IBM Quantum hardware 💻🔁⚛️
+- 📈 Plot reward history and chemical property distributions
+- 🧬 Modify molecules using **REINFORCE policy gradients**
+- 🔬 Evaluate model performance by logP improvement
+- 💾 Save/load trained models
 
 ---
 
 ## 📦 Dependencies
 
-Install all required libraries:
+Install required packages:
 
 ```bash
-pip install rdkit-pypi gym torch pandas matplotlib pennylane deepchem
+pip install -r requirements.txt
 ```
-## 🚀 How to Run
-Clone or download this repo
+## 🧪 Available Agent Types
 
-Run the training script:
+| Mode      | Description                          | Backend         |
+|-----------|--------------------------------------|-----------------|
+| classical | Simple PyTorch neural network        | CPU/GPU         |
+| quantum   | PennyLane quantum circuit            | PennyLane (sim) |
+| aer       | Qiskit AerSimulator quantum circuit  | Qiskit Aer      |
+| ibm       | Real quantum backend from IBM Quantum | IBM Q Runtime   |
+
+---
+
+## 🧠 Actions the Agent Can Take
+
+| Action | Modification             |
+|--------|--------------------------|
+| 0      | Do nothing               |
+| 1      | Add methyl group (–CH₃)  |
+| 2      | Add hydroxyl group (–OH) |
+
+---
+
+## 🛠️ How to Use
+
+### 1. Clone this repo
+
+```bash
+git clone https://github.com/yourusername/DrugDiscovery-RL-Agent.git
+cd DrugDiscovery-RL-Agent
+```
+
+### 2. Run training
 
 ```bash
 python train_compare.py
 ```
-- ✨ The script auto-downloads tox21.csv.gz on first run
 
-## 🧠 Quantum vs Classical Mode
+#### You will be prompted to select an agent type:
 
-Edit the train_compare.py file:
 ```bash
-use_quantum = True  # Set to False to use classical agent
+🤖 What type of agent would you like to train?
+  - classical
+  - quantum
+  - aer
+  - ibm
+  If you choose ibm, you'll be prompted for your IBM Quantum API token.
 ```
-True → Quantum policy (via PennyLane)
 
-False → Classical neural net policy
+### 💾 Model Saving
 
-## 🧪 Molecule Actions
+```bash
+Trained models are saved automatically in the /models/ directory:
 
-Action ID	Modification
-0	        Do nothing
-1	        Add methyl group
-2	        Add hydroxyl group
+Agent	       Path
+Classical	   models/model_crl.pth
+Quantum	       models/model_qrl.pth
+Aer	           models/model_aer.pth
+IBM	       models/model_ibm.pth
+```
+
+### 📊 Evaluation Metrics
+
+```bash
+After training, the model is evaluated over 50 new episodes:
+  - ✅ Average logP improvement
+  - 📈 Histogram of reward (logP) values
+  - 🔬 Summary of improved vs. unchanged vs. worse molecules
+```
+
+### 🌐 IBM Quantum Integration
+
+``` bash
+To use a real quantum backend:
+  1. Get an API token from IBM Quantum
+  2. Paste it into the prompt when choosing the ibm agent
+  3. The program will:
+    - Submit jobs
+    - Wait for real quantum execution
+    - Handle retry/timeout logic
+  ⚠️ IBM allows only a few pending jobs at a time. The code will wait/retry if queue is full.
+```
+
+### 🧪 Run Tests
+
+```bash
+pytest -v
+```
+
+### 🧬 Inspired By
+  - PennyLane
+  - Qiskit
+  - DeepChem
+  - RDKit
+
+
+### 📜 License
+  - MIT License – use freely with credit.
