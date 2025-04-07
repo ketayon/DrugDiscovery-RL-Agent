@@ -123,5 +123,9 @@ pytest -v
   - RDKit
 
 
-### 📜 License
-  - MIT License – use freely with credit.
+## 📜 License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+© 2024–2025 Maksym Husarov
+
