@@ -76,6 +76,16 @@ python train_compare.py
   If you choose ibm, you'll be prompted for your IBM Quantum API token.
 ```
 
+### ❗️❗️❗️ Pay attention **Note on IBM Quantum Access**
+
+If you choose the `ibm` agent (real quantum backend), please be aware:
+
+- ⏱️ **Free plan**: Jobs are queued behind others and may take **~10 minutes** to run.
+- 💳 **Paid plans**: Provide **priority access**, but **may incur charges** depending on your usage and account limits.
+
+You will be prompted to enter your **IBM Quantum API token** at runtime. You can manage your plan and quota at [https://quantum.ibm.com](https://quantum.ibm.com).
+
+
 ### 💾 Model Saving
 
 ```bash
