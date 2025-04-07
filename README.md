@@ -21,7 +21,7 @@ Agents (classical and quantum) learn to modify molecules to **improve chemical p
 Install all required libraries:
 
 ```bash
-pip install rdkit-pypi gym torch pandas matplotlib pennylane deepchem
+pip install rdkit gym torch pandas matplotlib pennylane deepchem tensorflow
 ```
 ## 🚀 How to Run
 Clone or download this repo
