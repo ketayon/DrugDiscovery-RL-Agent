@@ -3,7 +3,6 @@ import urllib.request
 import pandas as pd
 import logging
 import torch
-import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
 from rdkit import Chem

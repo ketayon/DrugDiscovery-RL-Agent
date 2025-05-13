@@ -21,8 +21,6 @@ venv/
 *.err
 
 # === Model Checkpoints ===
-*.pth
-*.pt
 checkpoints/
 runs/
 

@@ -6,7 +6,6 @@ from rdkit import RDLogger
 
 import numpy as np
 import random
-from PIL import Image
 import logging
 
 

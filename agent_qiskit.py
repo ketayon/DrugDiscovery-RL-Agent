@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 from qiskit import QuantumCircuit, transpile
 from qiskit_aer import AerSimulator
-from qiskit.quantum_info import Statevector
 import numpy as np
 import logging
 
